@@ -3,6 +3,7 @@ package com.example.android.MyMovie;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.android.MyMovie.adapters.MovieAdapter;
 import com.example.android.MyMovie.models.MovieResponse;
@@ -139,6 +141,7 @@ public class MainFragment extends Fragment {
             }
             @Override
             public void onFailure(Throwable t) {
+                Toast.makeText(getContext(),"Error Fetching Data",Toast.LENGTH_SHORT);
             }
         });
     }

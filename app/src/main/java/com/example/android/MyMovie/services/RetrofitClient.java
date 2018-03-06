@@ -21,7 +21,7 @@ public class RetrofitClient {
 
     private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
 
-    public static <Service> Service createService(Class<Service> Class) {
+    public static <Services> Services createService(Class<Services> Class) {
         httpClient.addInterceptor(new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {

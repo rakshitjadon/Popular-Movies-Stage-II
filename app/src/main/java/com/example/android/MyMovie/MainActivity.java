@@ -32,10 +32,10 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Bund
     @Override
     public void onItemSelected(Movie movie) {
         if (mTwoPane) {
-            Bundle arguments = new Bundle();
-            arguments.putParcelable(MOVIE_TAG, movie);
+            Bundle argument = new Bundle();
+            argument.putParcelable(MOVIE_TAG, movie);
             DetailFragment fragment = new DetailFragment();
-            fragment.setArguments(arguments);
+            fragment.setArguments(argument);
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.movieDetail, fragment, DETAIL_FRAGMENT_TAG)
                     .commit();

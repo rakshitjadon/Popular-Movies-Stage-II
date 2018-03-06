@@ -110,6 +110,8 @@ public class DetailFragment extends Fragment {
             }
             @Override
             public void onFailure(Throwable t) {
+                Toast.makeText(getContext(),"Error Fetching Data",Toast.LENGTH_SHORT);
+
             }
         });
     }
@@ -126,6 +128,8 @@ public class DetailFragment extends Fragment {
             }
             @Override
             public void onFailure(Throwable t) {
+                Toast.makeText(getContext(),"Error Fetching Data",Toast.LENGTH_SHORT);
+
             }
         });
     }
