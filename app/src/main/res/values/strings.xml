@@ -6,4 +6,15 @@
     <string name="favourites">Favourites</string>
     <string name="rating">Rating</string>
     <string name="popular">Popular</string>
+    <string name="add">Favourited</string>
+    <string name="unstar_it">Unstar IT</string>
+    <string name="mark_unfavorite">UN STAR IT.</string>
+    <string name="mark_favorite" >STAR IT.</string>
+    <string name="remove_fav_msg">Removed</string>
+    <string name="MoviesApp">MoviesApp</string>
+    <string name="MovieApp">Movie App</string>
+    <string name="MovieDetails">Movie Details</string>
+    <string name="release_date">RELEASE DATE</string>
+    <string name="rating_out_of_10">RATING OUT OF 10</string>
+    <string name="reviews">Reviews</string>
 </resources>

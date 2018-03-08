@@ -28,7 +28,7 @@ public class MovieAdapter extends ArrayAdapter<Movie> {
         }
 
         ImageView moviePoster = (ImageView) convertView.findViewById(R.id.movie_poster);
-        Picasso.with(getContext()).load(movie.getImage()).into(moviePoster);
+        Picasso.with(getContext()).load(movie.getImage()).placeholder(R.drawable.ic_launcher_background).into(moviePoster);
         return convertView;
     }
 }

@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.android.MyMovie.models.Movie;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.BundleCallback {
+public class MainActivity extends AppCompatActivity implements MainFragment.MoiveCall {
 
-    private static final String DETAIL_FRAGMENT_TAG = "DTAG";
-    public final static String MOVIE_TAG = "MOVIE";
+    private static final String DTAG = "DTAG";
+    public final static String MTAG = "MOVIE";
 
     private boolean mTwoPane;
 
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Bund
             mTwoPane = true;
             if (savedInstanceState == null) {
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.movieDetail, new DetailFragment(), DETAIL_FRAGMENT_TAG)
+                        .replace(R.id.movieDetail, new DetailFragment(), DTAG)
                         .commit();
             }
         } else {
@@ -30,18 +30,18 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Bund
     }
 
     @Override
-    public void onItemSelected(Movie movie) {
+    public void on(Movie movie) {
         if (mTwoPane) {
             Bundle argument = new Bundle();
-            argument.putParcelable(MOVIE_TAG, movie);
+            argument.putParcelable(MTAG, movie);
             DetailFragment fragment = new DetailFragment();
             fragment.setArguments(argument);
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.movieDetail, fragment, DETAIL_FRAGMENT_TAG)
+                    .replace(R.id.movieDetail, fragment, DTAG)
                     .commit();
         } else {
             Intent intent = new Intent(this, DetailActivity.class)
-                    .putExtra(MOVIE_TAG, movie);
+                    .putExtra(MTAG, movie);
             startActivity(intent);
         }
     }

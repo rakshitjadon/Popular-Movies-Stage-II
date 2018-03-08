@@ -8,12 +8,12 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_round"
-        android:label="MoviesApp"
+        android:label="@string/MoviesApp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name="com.example.android.MyMovie.MainActivity"
-            android:label="Movie App">
+            android:label="@string/MovieApp">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,8 +22,10 @@
         </activity>
         <activity
             android:name="com.example.android.MyMovie.DetailActivity"
-            android:label="Movie Details" />
-
+            android:label="@string/MovieDetails" />
+        <provider
+            android:name=".Database.MovieProvider"
+            android:authorities="com.example.android.MyMovie" />
     </application>
 
 </manifest>
