@@ -165,11 +165,11 @@ class CatchFav extends AsyncTask<Void, Void, Boolean> {
     @SuppressLint("StaticFieldLeak")
     private Button button;
 
-    CatchFav(Context mContext, Movie movie, Boolean aBoolean, Button favButton) {
+    CatchFav(Context mContext, Movie movie, Boolean aBoolean, Button button) {
         this.mContext = mContext;
         this.movie = movie;
         this.aBoolean = aBoolean;
-        this.button = favButton;
+        this.button = button;
     }
 
     @Override
