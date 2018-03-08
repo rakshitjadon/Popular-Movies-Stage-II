@@ -8,8 +8,6 @@
     <string name="popular">Popular</string>
     <string name="add">Favourited</string>
     <string name="unstar_it">Unstar IT</string>
-    <string name="mark_unfavorite">UN STAR IT.</string>
-    <string name="mark_favorite" >STAR IT.</string>
     <string name="remove_fav_msg">Removed</string>
     <string name="MoviesApp">MoviesApp</string>
     <string name="MovieApp">Movie App</string>

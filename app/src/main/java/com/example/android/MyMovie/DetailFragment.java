@@ -223,9 +223,9 @@ class BeFav extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onPostExecute(Void aid) {
         if (!aBoolean) {
-            button.setText(mContext.getString(R.string.mark_unfavorite));
+            button.setText(mContext.getString(R.string.unstar_it));
         } else {
-            button.setText(mContext.getString(R.string.mark_favorite));
+            button.setText(mContext.getString(R.string.star_it));
         }
     }
 }
