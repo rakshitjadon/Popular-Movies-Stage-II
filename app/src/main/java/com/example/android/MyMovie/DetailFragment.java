@@ -183,9 +183,9 @@ class CatchFav extends AsyncTask<Void, Void, Boolean> {
             new BeFav(mContext, movie, bBoolean, button).execute();
         } else {
             if (bBoolean) {
-                button.setText(mContext.getString(R.string.mark_unfavorite));
+                button.setText(mContext.getString(R.string.unstar_it));
             } else {
-                button.setText(mContext.getString(R.string.mark_favorite));
+                button.setText(mContext.getString(R.string.star_it));
             }
         }
     }
