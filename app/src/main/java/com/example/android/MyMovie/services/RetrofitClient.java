@@ -15,22 +15,20 @@ import retrofit2.Retrofit;
 
 public class RetrofitClient {
 
-    public static Retrofit.Builder builder = new Retrofit.Builder()
+    public static Retrofit.Builder makes = new Retrofit.Builder()
             .baseUrl("http://api.themoviedb.org/")
             .addConverterFactory(GsonConverterFactory.create());
-
-    private static OkHttpClient.Builder httpClient = new OkHttpClient.Builder();
-
-    public static <Services> Services createService(Class<Services> Class) {
-        httpClient.addInterceptor(new Interceptor() {
+    private static OkHttpClient.Builder C = new OkHttpClient.Builder();
+    public static <ryan> ryan make(Class<ryan> Class) {
+        C.addInterceptor(new Interceptor() {
             @Override
-            public Response intercept(Chain chain) throws IOException {
-                HttpUrl uri = chain.request().url().newBuilder().addQueryParameter("api_key", BuildConfig.API_KEY).build();
-                Request request = chain.request().newBuilder().url(uri).build();
-                return chain.proceed(request);
+            public Response intercept(Chain rope) throws IOException {
+                HttpUrl www = rope.request().url().newBuilder().addQueryParameter("api_key", BuildConfig.API_KEY).build();
+                Request please = rope.request().newBuilder().url(www).build();
+                return rope.proceed(please);
             }
         });
-        Retrofit retrofit = builder.client(httpClient.build()).build();
+        Retrofit retrofit = makes.client(C.build()).build();
         return retrofit.create(Class);
     }
 }

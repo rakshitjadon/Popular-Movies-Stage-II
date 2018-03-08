@@ -125,7 +125,7 @@ public class MainFragment extends Fragment {
                 ((MoiveCall) getActivity()).on(movies.get(position));
             }
         });
-        retrofitService = RetrofitClient.createService(RetrofitService.class);
+        retrofitService = RetrofitClient.make(RetrofitService.class);
         getMovies(mSort);
         return rootView;
     }

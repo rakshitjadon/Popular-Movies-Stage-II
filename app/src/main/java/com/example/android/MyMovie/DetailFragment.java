@@ -89,7 +89,7 @@ public class DetailFragment extends Fragment {
                 new CatchFav(getActivity(), mMovie, true, favouriteButton).execute();
             }
         });
-        retrofitService = RetrofitClient.createService(RetrofitService.class);
+        retrofitService = RetrofitClient.make(RetrofitService.class);
         Reviews();
         Trailers();
         return rootView;
