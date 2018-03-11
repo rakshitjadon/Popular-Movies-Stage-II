@@ -144,7 +144,7 @@ public class MainFragment extends Fragment {
             @SuppressLint("ShowToast")
             @Override
             public void onFailure(Throwable t) {
-                Toast.makeText(getContext(),"Error Fetching Data",Toast.LENGTH_SHORT);
+                Toast.makeText(getContext(),"Error  Data",Toast.LENGTH_SHORT);
             }
         });
     }
